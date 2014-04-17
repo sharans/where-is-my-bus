@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+        >
+
+    <fragment
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.MapFragment"
+            android:layout_width="350dp"
+            android:layout_height="350dp"/>
+
+    <EditText android:id="@+id/source_text"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:hint="Enter Source"
+              android:layout_alignParentLeft="true" android:layout_marginLeft="9dp"
+              android:layout_above="@+id/bus_num_text"/>
+
+    <EditText android:id="@+id/destination_text"
+              android:layout_width="wrap_content"
+              android:layout_height="29dp"
+              android:hint="Enter Destination"
+              android:layout_toRightOf="@+id/source_text" android:layout_alignTop="@+id/source_text"
+              android:layout_alignBottom="@+id/source_text"/>
+
+    <EditText android:id="@+id/bus_num_text"
+              android:layout_width="135dp"
+              android:layout_height="54dp"
+              android:hint="Enter Bus Number"
+              android:layout_alignRight="@+id/map" android:layout_alignTop="@+id/save_button"/>
+    <Button android:id="@+id/save_button"
+            android:layout_height="wrap_content"
+            android:layout_width="55dp"
+            android:text="Save" android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>
+
